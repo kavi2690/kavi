@@ -56,6 +56,12 @@ class DashboardPage:
     def open_Roles (self):
         self.page.get_by_text("Roles").click()
         self.page.wait_for_timeout(3000)
+        
+    def open_AgeGroup(self):
+        self.page.goto("https://hywebdemo.com/medora/admin/age-groups")
+        self.page.set_default_timeout(60000)
+        # self.page.get_by_text("Age Group").click()
+        # self.page.wait_for_timeout(3000)
        
           
         

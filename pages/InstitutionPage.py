@@ -17,21 +17,22 @@ class InstitutionPage:
         
         self.page.wait_for_timeout(4000)
         
-        self.page.fill("input[name='name']", "Fun Friday Events")
+        self.page.fill("input[name='name']", "Fun Friday")
         
         self.page.wait_for_timeout(4000)
         
-        # self.page.locator('select[name="type"]').select_option(label="school")
-        # self.page.locator('select[name="type"]').first.select_option(label="School")
         self.page.locator("#createForm select[name='type']").select_option(label="School")
         
         self.page.wait_for_timeout(3000)
         
-        self.page.get_by_text("Save")
+        # self.page.get_by_text("Save")
+        # self.page.wait_for_timeout(3000)
+
+        self.page.locator("text=Save").click()
         
         # edit
         self.page.wait_for_timeout(3000)
-        self.page.evaluate("window.scrollTo(0, -5000)")
+        # self.page.evaluate("window.scrollTo(0, -5000)")
         
         self.page.locator('a.edit[data-id="1"]').click()
         self.page.wait_for_timeout(4000)

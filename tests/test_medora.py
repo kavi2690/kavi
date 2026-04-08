@@ -10,6 +10,8 @@ from pages.EventDomainPage import EventDomainPage
 from pages.InstitutionPage import InstitutionPage
 from pages.HighlightsPage import HighlightsPage
 from pages.EventGroupPage import EventGroupPage
+
+from pages.AgeGroupPage import AgeGroupPage
 from pages.RolesPage import RolesPage
 
 
@@ -30,6 +32,7 @@ def test_medora_flow(page):
     highlights = HighlightsPage(page)
     eventgroup = EventGroupPage(page)
     roles = RolesPage(page)
+    agegroup = AgeGroupPage(page)
     login.open(BASE_URL)
 
     login.check_logo()
@@ -46,48 +49,52 @@ def test_medora_flow(page):
 
     dashboard.open_master()
 
-    # dashboard.open_country()
+#     dashboard.open_country()
 
-    # country.create_country()
+#     country.create_country()
 
-    # dashboard.open_state()
+#     dashboard.open_state()
 
-    # state.create_state()
+#     state.create_state()
 
-    # dashboard.open_city()
+#     dashboard.open_city()
 
-    # city.create_city()
+#     city.create_city()
     
-    # dashboard.open_EventType()
+#     dashboard.open_EventType()
     
-    # eventtype.create_EventType()
+#     eventtype.create_EventType()
     
-    # dashboard.open_BlogCategory()
+#     dashboard.open_BlogCategory()
 
-    # blogcategory.create_BlogCategory()
+#     blogcategory.create_BlogCategory()
     
-    # BlogTag
-    # dashboard.open_BlogTag()
-    # blogtag.create_BlogTag()
+#     # BlogTag
+#     dashboard.open_BlogTag()
+#     blogtag.create_BlogTag()
     
-    # Event Domain
-    # dashboard.open_EventDomain()
-    # eventdomain.create_EventDomain()
+#     # Event Domain
+#     dashboard.open_EventDomain()
+#     eventdomain.create_EventDomain()
     
-    # Institution
-    dashboard.open_Institution()
-    institution.create_Institution()
+#     # Institution
+#     dashboard.open_Institution()
+#     institution.create_Institution()
     
-    # Highlights
-    dashboard.open_Highlights()
-    highlights.create_Highlights()
+#     # Highlights
+#     dashboard.open_Highlights()
+#     highlights.create_Highlights()
 
-    # Event Group
-    dashboard.open_EventGroup()
-    eventgroup.create_EventGroup()
-
-    # Roles
-    dashboard.open_Roles()
-    roles.create_Roles()
+#     # Event Group
+#     dashboard.open_EventGroup()
+#     eventgroup.create_EventGroup()
+      
+#     # Agegroup
+    dashboard.open_AgeGroup()
+    agegroup.create_AgeGroup()
+    
+#     # # Roles
+#     dashboard.open_Roles()
+#     roles.create_Roles()
     
     
