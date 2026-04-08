@@ -1,18 +1,18 @@
-from pages.LoginPage import LoginPage
-from pages.DashboardPage import DashboardPage
-from pages.CountryPage import CountryPage
-from pages.StatePage import StatePage
-from pages.CityPage import CityPage
-from pages.EventTypePage import EventTypePage
-from pages.BlogCategoryPage import BlogCategoryPage
-from pages.BlogTagPage import BlogTagPage
-from pages.EventDomainPage import EventDomainPage
-from pages.InstitutionPage import InstitutionPage
-from pages.HighlightsPage import HighlightsPage
-from pages.EventGroupPage import EventGroupPage
+from Masterpages.LoginPage import LoginPage
+from Masterpages.DashboardPage import DashboardPage
+from Masterpages.CountryPage import CountryPage
+from Masterpages.StatePage import StatePage
+from Masterpages.CityPage import CityPage
+from Masterpages.EventTypePage import EventTypePage
+from Masterpages.BlogCategoryPage import BlogCategoryPage
+from Masterpages.BlogTagPage import BlogTagPage
+from Masterpages.EventDomainPage import EventDomainPage
+from Masterpages.InstitutionPage import InstitutionPage
+from Masterpages.HighlightsPage import HighlightsPage
+from Masterpages.EventGroupPage import EventGroupPage
 
-from pages.AgeGroupPage import AgeGroupPage
-from pages.RolesPage import RolesPage
+from Masterpages.AgeGroupPage import AgeGroupPage
+from Masterpages.RolesPage import RolesPage
 
 
 from config import BASE_URL, EMAIL, OTP
@@ -48,6 +48,9 @@ def test_medora_flow(page):
     login.click_submit()
 
     dashboard.open_master()
+    
+    dashboard.open_EducationManagement()
+    
 
 #     dashboard.open_country()
 
@@ -90,11 +93,13 @@ def test_medora_flow(page):
 #     eventgroup.create_EventGroup()
       
 #     # Agegroup
-    dashboard.open_AgeGroup()
-    agegroup.create_AgeGroup()
+    # dashboard.open_AgeGroup()
+    # agegroup.create_AgeGroup()
     
 #     # # Roles
 #     dashboard.open_Roles()
 #     roles.create_Roles()
+
+
     
-    
+   
