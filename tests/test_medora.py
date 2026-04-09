@@ -1,3 +1,5 @@
+from typing import Self
+
 from Masterpages.LoginPage import LoginPage
 from Masterpages.DashboardPage import DashboardPage
 from Masterpages.CountryPage import CountryPage
@@ -10,9 +12,13 @@ from Masterpages.EventDomainPage import EventDomainPage
 from Masterpages.InstitutionPage import InstitutionPage
 from Masterpages.HighlightsPage import HighlightsPage
 from Masterpages.EventGroupPage import EventGroupPage
-
 from Masterpages.AgeGroupPage import AgeGroupPage
 from Masterpages.RolesPage import RolesPage
+
+from EducationPages.EducationTypesPage import EducationTypesPage
+from EducationPages.StagesCategoriesPage import StagesCategoriesPage
+from EducationPages.SubStagesLevelPage import SubStagesLevelPage
+from EducationPages.DepartmentsPage import DepartmentsPage
 
 
 from config import BASE_URL, EMAIL, OTP
@@ -33,6 +39,11 @@ def test_medora_flow(page):
     eventgroup = EventGroupPage(page)
     roles = RolesPage(page)
     agegroup = AgeGroupPage(page)
+    
+    educationtypes = EducationTypesPage(page)
+    stagescategories = StagesCategoriesPage(page)
+    substageslevel = SubStagesLevelPage(page)
+    departments = DepartmentsPage(page)
     login.open(BASE_URL)
 
     login.check_logo()
@@ -47,11 +58,12 @@ def test_medora_flow(page):
 
     login.click_submit()
 
-    dashboard.open_master()
+    # dashboard.open_master()
     
     dashboard.open_EducationManagement()
+    page.wait_for_timeout(2000)
     
-
+    
 #     dashboard.open_country()
 
 #     country.create_country()
@@ -100,6 +112,27 @@ def test_medora_flow(page):
 #     dashboard.open_Roles()
 #     roles.create_Roles()
 
-
+# education 
+    # dashboard.open_EducationTypes()
+    # page.wait_for_timeout(2000)
+    # educationtypes.create_EducationTypes()
     
+    
+# stagesCategories
+    
+    # dashboard.open_StagesCategoriesPage()
+
+    # stagescategories.create_StagesCategories()
+    
+# Substageslevel 
+    
+    
+    # dashboard.open_SubStagesLevel()
+    
+    # substageslevel.create_SubStagesLevel()
    
+# departments
+
+    dashboard.open_Departments()
+    
+    departments.create_Departments()

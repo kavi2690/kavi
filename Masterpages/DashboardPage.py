@@ -63,7 +63,23 @@ class DashboardPage:
         
     def open_EducationManagement(self):
         self.page.get_by_text("Education Management").click()
-        self.page.wait_for_timeout(3000)
-          
+        self.page.wait_for_timeout(8000)
+        
+    def open_EducationTypes(self):
+        self.page.goto("https://hywebdemo.com/medora/admin/levels")
+        self.page.wait_for_timeout(8000)
+        
+    def open_StagesCategories(self):
+        self.page.goto("https://hywebdemo.com/medora/admin/sub-levels")
+        self.page.wait_for_timeout(8000)
+        
+    def open_SubStagesLevel(self):
+        self.page.goto("https://hywebdemo.com/medora/admin/sub-sub-levels")
+        self.page.wait_for_timeout(8000)
+        
+    def open_Departments(self):
+        self.page.goto("https://hywebdemo.com/medora/admin/departments")
+        self.page.wait_for_timeout(8000)
+        
         
         
